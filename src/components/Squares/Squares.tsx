@@ -1,21 +1,19 @@
-import './Squares.css';
+import "./Squares.css";
 
 interface SquaresProps {
-    word: string;
+  word: string;
 }
 
 function Squares(props: SquaresProps) {
-
-    return (
-    <input 
-    className="textbox" 
-    type="text" 
-    maxLength={1}
-    alt={props.word}
-    disabled
+  return (
+    <input
+      className="textbox"
+      type="text"
+      maxLength={1}
+      alt={props.word}
+      disabled
     />
-    );
-    
+  );
 }
 
 export default Squares;

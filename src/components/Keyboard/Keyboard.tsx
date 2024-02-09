@@ -1,9 +1,5 @@
 function Keyboard() {
-    return (
-        <>
-            
-        </>
-    )
+  return <></>;
 }
 
 export default Keyboard;

@@ -1,4 +1,5 @@
-h1, h4 {
+h1,
+h4 {
   text-align: center;
   margin-top: 1rem;
 }
@@ -38,6 +39,7 @@ h4 {
 .button-container {
   position: relative;
   height: 2rem;
+  margin-bottom: 2rem;
 }
 
 .button-container button {
@@ -46,4 +48,3 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-

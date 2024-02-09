@@ -12,10 +12,10 @@ function App() {
       "https://raw.githubusercontent.com/Hugo0/wordle/main/webapp/data/languages/pl/pl_5words.txt",
     );
     const res = (await words.text()).split("\n");
-    const generatedWord = res[Math.floor(Math.random() * res.length)];
+    const createdWord = res[Math.floor(Math.random() * res.length)];
     setTextboxes("");
     setIsContainerHidden(false);
-    setGeneratedWord(generatedWord);
+    setGeneratedWord(createdWord);
   }
   useEffect(() => {
     const regex = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/;
@@ -64,8 +64,16 @@ function App() {
     <>
       <h1>Wordle :~~PP</h1>
       <h4>Zgadnij słuwko</h4>
-      <div className={isContainerHidden ? "button-container" : "button-container hidden"}>
-        <button id="generateButton" onClick={fetchWord} data-word={isContainerHidden ? "" : generatedWord}>
+      <div
+        className={
+          isContainerHidden ? "button-container" : "button-container hidden"
+        }
+      >
+        <button
+          id="generateButton"
+          onClick={fetchWord}
+          data-word={isContainerHidden ? "" : generatedWord}
+        >
           Generuj słowo
         </button>
       </div>

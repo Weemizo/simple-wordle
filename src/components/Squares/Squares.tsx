@@ -1,16 +1,17 @@
 import "./Squares.css";
 
 interface SquaresProps {
-  word: string;
+  rowcol: string;
+  class: string;
 }
 
 function Squares(props: SquaresProps) {
   return (
     <input
-      className="textbox"
+      className={props.rowcol === "1-1" ? "textbox tb-active" : props.class}
       type="text"
       maxLength={1}
-      alt={props.word}
+      alt={props.rowcol}
       disabled
     />
   );
